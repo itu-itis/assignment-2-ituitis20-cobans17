@@ -188,15 +188,6 @@ p {
 	color: rgb(255, 255, 255);
 }
 
-.table {
-	border: 1px solid #58c5bac7;
-	border-radius: 20px;
-	border-collapse: separate;
-	border-spacing: 0px;
-	border-color: #f1f1f1;
-	
-}
-
 .table .center {
 	margin-right:auto;
 	margin-left:auto;
@@ -284,4 +275,24 @@ p {
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 	background-color: #6c757d;
 	color:white;
+}
+
+.form {
+	border: 0;
+	border-width: 0px;
+}
+
+input, label {
+	display: block;
+	font-family: 'Quicksand', sans-serif;	font-size: 12pt;
+}
+
+select, option {
+	font-family: 'Quicksand', sans-serif;	font-size: 12pt;
+}
+
+.center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

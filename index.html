@@ -81,43 +81,71 @@
 
         <button type="button" class="button" onclick="toggle_teacher_add()">Add Teacher</button>
         <button type="button" class="button" onclick="toggle_team_add()">Add Team</button>
-
+        <br>
+        <br>
+        <br>
+        <br>
         <form class="form" id="form">
 			<fieldset id="add_teacher" style="display:none;">
-                <div class="teacherNameForm">
-                    <label>Teacher Name</label>
-                    <input type="text" name="teacherName" id="teacherName" required>
-                </div>
+                <div class="row">
+                    <div class="column" style="width: 32%;">
+                        <div class="teacherNameForm">
+                            <div class="row center"><label>Teacher Name</label></div>
+                            <div class="row center"><input type="text" name="teacherName" id="teacherName" required></div>
+                        </div>
+                    </div>
 
-                <div class="subjectForm">
-                    <label>Subject</label>
-                    <input type="text" name="subject" id="subject" required>
-                </div>
+                    <div class="column" style="width: 32%;">
+                        <div class="subjectForm">
+                            <div class="row center"><label class="center">Subject</label></div>
+                            <div class="row center"><input class="center" type="text" name="subject" id="subject" required></div>
+                        </div>   
+                    </div>
 
-                <div class="clusterForm">
-                    <label>Cluster</label>
-                        <select name="cluster" id="cluster">
-                            <option>MF</option>
-                            <option>TS</option>
-                            <option>TM</option>
-                        </select>
+                    <div class="column" style="width: 32%;">
+                        <div class="clusterForm">
+                            <div class="row center"><label>Cluster</label></div>
+                            <div class="row center">
+                                <select name="cluster" id="cluster" style="height: 30px; width: 100px;">
+                                    <option>MF</option>
+                                    <option>TS</option>
+                                    <option>TM</option>
+                                </select>
+                            </div>    
+                            
+                        </div>
+                    </div>
                 </div>
-
-                <button type="button" onclick="teacher_add()" class="button">Submit</button>		
+                <div class="row">
+                    <div class="center">
+                        <input type="submit" onclick="teacher_add()" class="button" value="Add"></input>
+                    </div>
+                </div>
+                		
             </fieldset>
             
             <fieldset id="add_team" style="display:none;">
-                <div>
-                    <label>Team Name</label>
-                    <input type="text" name="teamName" id="teamName" required>
-                </div>
-                
-                <div>
-                    <label>Sports Type</label>
-                    <input type="text" name="sportsType" id="sportsType" required>
+                <div class="row">
+                    <div class="column" style="width: 48%;">
+                        <div class="row center"><label for="teamName">Team Name</label></div>
+                        <div class="row center"><input type="text" name="teamName" id="teamName" required></div>
+                    </div>
+                    
+                    <div class="column" style="width: 48%;">
+                        <div class="row center"><label for="sportsType">Sports Type</label></div>
+                        <div class="row center"><input type="text" name="sportsType" id="sportsType" required></div>
+                    </div>
                 </div>
 
-                <button type="button" onclick="team_add()" class="button">Submit</button>
+                <div class="row">
+                    <div class="center">
+                        <input type="submit" onclick="team_add()" class="button" value="Add"></input>
+                    </div>
+                    
+                </div>
+                
+
+                
             </fieldset>
 		</form>
         

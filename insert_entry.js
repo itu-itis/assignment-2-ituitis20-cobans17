@@ -13,6 +13,11 @@ function teacher_add() {
     var subject = document.getElementById("subject").value;
     var cluster = document.getElementById("cluster").value; 
     var teacherTable = document.getElementById("teacherTable");
+
+    if(teacherName=="" || subject=="" || cluster==""){
+        document.getElementById("form").reset();
+        return;
+    }
     
     var row = teacherTable.insertRow(-1);
     var cell_teacherName = row.insertCell(0);
@@ -31,6 +36,11 @@ function team_add() {
     var teamName = document.getElementById("teamName").value;
     var teamTable = document.getElementById("teamTable");
     
+    if(sportsType=="" || teamName==""){
+        document.getElementById("form").reset();
+        return;
+    }
+
     var row = teamTable.insertRow(-1);
     var cell_teamName = row.insertCell(0);
     var cell_sportsType = row.insertCell(1);
