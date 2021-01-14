@@ -15,6 +15,7 @@
             font-family: "Pattaya";
         } 
     </style>
+    <script src="insert_entry.js"></script>
 </head>
 
 <body>
@@ -34,36 +35,58 @@
                 <a style="text-decoration: none;"><span style="color: black;">Bafra <br> High School of Science</span></a>
             </h1>	
         </header>
-    </div>
+    </div> 
 
-    <div class="content" id="home">
-        <h1 style="margin-top:auto;margin-left: 20px;">About our school</h1>
-        <p>Bafra High School of Science was built in 2010. Since 2010, our school is the <strong>most succesful school</strong> in Bafra. Our alumines are located in the best universities in <em>Turkey</em> and in the <em>World.</em></p>
-        <h1>Top universities that our school gave alumni.</h1>
-        <div class="school-list">
-            <ol>
-                <li>Engineering
-                    <ol style="list-style-type: lower-alpha; padding-bottom: 0;">
-                        <li>Istanbul Technical University</li>
-                        <li>Middle East Technical University</li>
-                        <li>Koç University</li>
-                        <li>Bilkent University</li>
-                        <li>Sabancı University</li>
-                        <li>Boğaziçi University</li>
-                    </ol>
-                </li>
-                <li>Medicine
-                    <ol style="list-style-type: lower-alpha; padding-bottom: 0;">
-                        <li>Hacettepe University</li>
-                        <li>Gazi University</li>
-                        <li>Ankara University</li>
-                        <li>Marmara University</li>
-                    </ol>
-                </li>
-            </ol>
+    <!--Teachers&Teams page.-->
+    <div class="content" id="teachers_and_teams">
+        
+
+        <div class="row">
+            <div class="column" style="width: 49%;">
+                <div class="table">
+                    <div><h1>Teachers</h1></div>
+                    <div>
+                        <table class="center">
+                            <tbody>
+                            <tr style="height: 22px;">
+                            <th style="height: 22px;">Name</th>
+                            <th style="height: 22px;">Subject</th>
+                            <th style="height: 22px;">Cluster</th>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="column" style="width: 49%;">
+                <div class="table">
+                    <div><h1>Sports Teams</h1></div>
+                    <div>
+                        <table class="center">
+                            <tbody>
+                            <tr style="height: 22px;">
+                            <th style="height: 22px;">Team Name</th>
+                            <th style="height: 22px;">Sports Type</th>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
+        
+        
+
+        <button type="button" class="button" onclick="toggle_teacher_add()">Add Teacher</button>
+        <button type="button" class="button" onclick="toggle_team_add()">Add Team</button>
+        
+
+
     </div>
     
+    <!--Announcements page-->
     <div class="content" id="announcements">
         <div class="row">
             <div class="column">
@@ -94,56 +117,57 @@
         </div>
     </div>
 
+    <!--Graduates Page-->
     <div class="content" id="graduates">
-        <div class="graduates-table">
+        <div class="table">
             <div><h1>2017 Graduates</h1></div>
             <div>
-                <table id="graduates">
+                <table class="center">
                     <tbody>
                     <tr style="height: 22px;">
-                    <td style="height: 22px;">&nbsp;#</td>
-                    <td style="height: 22px;">Name</td>
-                    <td style="height: 22px;">Department</td>
-                    <td style="height: 22px;">&nbsp;University</td>
-                    <td style="height: 22px;">&nbsp;Choice number</td>
-                    <td style="height: 22px;">&nbsp;Point type</td>
-                    <td style="height: 22px;">&nbsp;Points</td>
+                    <th style="height: 22px;">#</th>
+                    <th style="height: 22px;">Name</th>
+                    <th style="height: 22px;">Department</th>
+                    <th style="height: 22px;">University</th>
+                    <th style="height: 22px;">Choice number</th>
+                    <th style="height: 22px;">Point type</th>
+                    <th style="height: 22px;">Points</th>
                     </tr>
                     <tr style="height: 22px;">
-                    <td style="height: 22px;">&nbsp;1</td>
+                    <td style="height: 22px;">1</td>
                     <td style="height: 22px;">Ş&uuml;kr&uuml; Oytun &Ccedil;oban</td>
                     <td style="height: 22px;">Computer Engineering</td>
-                    <td style="height: 22px;">&nbsp;Istanbul Technical University</td>
-                    <td style="height: 22px;">&nbsp;5</td>
-                    <td style="height: 22px;">&nbsp;SAY</td>
-                    <td style="height: 22px;">&nbsp;502</td>
+                    <td style="height: 22px;">Istanbul Technical University</td>
+                    <td style="height: 22px;">5</td>
+                    <td style="height: 22px;">SAY</td>
+                    <td style="height: 22px;">502</td>
                     </tr>
                     <tr style="height: 22px;">
-                    <td style="height: 22px;">&nbsp;2</td>
+                    <td style="height: 22px;">2</td>
                     <td style="height: 22px;">Adil Neyiş</td>
                     <td style="height: 22px;">Dental Sciences</td>
-                    <td style="height: 22px;">&nbsp;Erzurum Atat&uuml;rk University</td>
-                    <td style="height: 22px;">&nbsp;8</td>
-                    <td style="height: 22px;">&nbsp;SAY</td>
-                    <td style="height: 22px;">&nbsp;487</td>
+                    <td style="height: 22px;">Erzurum Atat&uuml;rk University</td>
+                    <td style="height: 22px;">8</td>
+                    <td style="height: 22px;">SAY</td>
+                    <td style="height: 22px;">487</td>
                     </tr>
                     <tr style="height: 22px;">
-                    <td style="height: 22px;">&nbsp;3</td>
+                    <td style="height: 22px;">3</td>
                     <td style="height: 22px;">Hakan Sağlam</td>
                     <td style="height: 22px;">Medicine</td>
-                    <td style="height: 22px;">&nbsp;Istanbul University</td>
-                    <td style="height: 22px;">&nbsp;2</td>
-                    <td style="height: 22px;">&nbsp;SAY</td>
-                    <td style="height: 22px;">&nbsp;510</td>
+                    <td style="height: 22px;">Istanbul University</td>
+                    <td style="height: 22px;">2</td>
+                    <td style="height: 22px;">SAY</td>
+                    <td style="height: 22px;">510</td>
                     </tr>
                     <tr style="height: 22.6px;">
-                    <td style="height: 22.6px;">&nbsp;4</td>
+                    <td style="height: 22.6px;">4</td>
                     <td style="height: 22.6px;">Batuhan Suluoğlu</td>
                     <td style="height: 22.6px;">Architecture</td>
-                    <td style="height: 22.6px;">&nbsp;Pamukkale University</td>
-                    <td style="height: 22.6px;">&nbsp;1</td>
-                    <td style="height: 22.6px;">&nbsp;SAY</td>
-                    <td style="height: 22.6px;">&nbsp;480</td>
+                    <td style="height: 22.6px;">Pamukkale University</td>
+                    <td style="height: 22.6px;">1</td>
+                    <td style="height: 22.6px;">SAY</td>
+                    <td style="height: 22.6px;">480</td>
                     </tr>
                     </tbody>
                 </table>
@@ -151,6 +175,7 @@
         </div>
     </div>
 
+    <!--About me page-->
     <div class="content" id="about_me">
         <div class="row">
             <div class="column" style="width:30%">
@@ -169,6 +194,37 @@
         </div>
     </div>
 
+    <!--Home page-->
+    <div class="content" id="home">
+        <h1 style="margin-top:auto;margin-left: 20px;">About our school</h1>
+        <p>Bafra High School of Science was built in 2010. Since 2010, our school is the <strong>most succesful school</strong> in Bafra. Our alumines are located in the best universities in <em>Turkey</em> and in the <em>World.</em></p>
+        <h1>Top universities that our school gave alumni.</h1>
+        <div class="school-list">
+            <ol>
+                <li>Engineering
+                    <ol style="list-style-type: lower-alpha; padding-bottom: 0;">
+                        <li>Istanbul Technical University</li>
+                        <li>Middle East Technical University</li>
+                        <li>Koç University</li>
+                        <li>Bilkent University</li>
+                        <li>Sabancı University</li>
+                        <li>Boğaziçi University</li>
+                    </ol>
+                </li>
+                <li>Medicine
+                    <ol style="list-style-type: lower-alpha; padding-bottom: 0;">
+                        <li>Hacettepe University</li>
+                        <li>Gazi University</li>
+                        <li>Ankara University</li>
+                        <li>Marmara University</li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+
+    <!--Footer-->
     <footer>
         <div class="footer">
             <div class="footer-object"><a href="https://www.linkedin.com/in/oytuncoban/" class="linkedin"> Şükrü Oytun Çoban</a></div>
