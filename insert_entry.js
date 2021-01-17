@@ -14,7 +14,7 @@ function teacher_add() {
     var cluster = document.getElementById("cluster").value; 
     var teacherTable = document.getElementById("teacherTable");
 
-    if(teacherName=="" || subject=="" || cluster==""){
+    if(teacherName=="" || subject==""){
         document.getElementById("form").reset();
         return;
     }
